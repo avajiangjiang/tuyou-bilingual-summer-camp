@@ -39,14 +39,3 @@ document.querySelectorAll('.highlight-card, .growth-item, .objective-card, .revi
 const style = document.createElement('style');
 style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(style);
-
-const CDN = 'https://cdn.jsdelivr.net/gh/avajiangjiang/tuyou-bilingual-summer-camp@main/';
-const GITHUB = 'https://avajiangjiang.github.io/tuyou-bilingual-summer-camp/';
-
-document.querySelectorAll('img[src^="' + CDN + '"]').forEach(img => {
-  img.addEventListener('error', () => {
-    if (img.dataset.fallbackApplied) return;
-    img.dataset.fallbackApplied = '1';
-    img.src = img.src.replace(CDN, GITHUB);
-  }, { once: true });
-});
