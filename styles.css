@@ -160,6 +160,7 @@ body {
   inset: 0;
   background:
     linear-gradient(135deg, rgba(26, 61, 46, 0.82) 0%, rgba(45, 106, 79, 0.72) 40%, rgba(82, 183, 136, 0.55) 100%),
+    url('assets/images/campus-aerial.jpg') center/cover no-repeat,
     url('assets/images/campus-aerial.png') center/cover no-repeat;
 }
 
@@ -638,6 +639,12 @@ body {
   color: var(--gold-400);
 }
 
+.living-card-featured picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .living-card-image {
   width: 100%;
   height: 180px;
@@ -753,6 +760,12 @@ body {
   border-radius: var(--radius);
   overflow: hidden;
   transition: transform 0.3s;
+}
+
+.gallery-item picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery-item img {

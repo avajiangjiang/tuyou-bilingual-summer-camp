@@ -39,3 +39,26 @@ document.querySelectorAll('.highlight-card, .growth-item, .objective-card, .revi
 const style = document.createElement('style');
 style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(style);
+
+const accommodationSection = document.getElementById('accommodation');
+if (accommodationSection) {
+  const warmGalleryImages = () => {
+    accommodationSection.querySelectorAll('source[srcset]').forEach(source => {
+      const img = new Image();
+      img.src = source.getAttribute('srcset');
+    });
+  };
+
+  const galleryWarmObserver = new IntersectionObserver(
+    entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        warmGalleryImages();
+        galleryWarmObserver.disconnect();
+      }
+    },
+    { rootMargin: '800px 0px' }
+  );
+  galleryWarmObserver.observe(accommodationSection);
+
+  document.querySelector('a[href="#accommodation"]')?.addEventListener('click', warmGalleryImages);
+}
