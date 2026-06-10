@@ -1472,7 +1472,6 @@ body {
     box-shadow: 0 -4px 20px rgba(26, 61, 46, 0.1);
   }
 
-  .mobile-cta-call,
   .mobile-cta-register {
     flex: 1;
     display: flex;
@@ -1480,24 +1479,14 @@ body {
     justify-content: center;
     min-height: 48px;
     border-radius: 999px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.15s;
-  }
-
-  .mobile-cta-call {
-    background: var(--green-50);
-    color: var(--green-800);
-    border: 1px solid rgba(45, 106, 79, 0.15);
-  }
-
-  .mobile-cta-register {
     background: var(--gold-500);
     color: var(--gray-900);
   }
 
-  .mobile-cta-call:active,
   .mobile-cta-register:active {
     transform: scale(0.98);
   }
