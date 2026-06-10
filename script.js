@@ -39,12 +39,3 @@ document.querySelectorAll('.highlight-card, .growth-item, .objective-card, .revi
 const style = document.createElement('style');
 style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(style);
-
-document.querySelectorAll('.schedule-day').forEach(day => {
-  day.addEventListener('toggle', () => {
-    if (!day.open || window.innerWidth > 768) return;
-    document.querySelectorAll('.schedule-day').forEach(other => {
-      if (other !== day) other.open = false;
-    });
-  });
-});
