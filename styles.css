@@ -160,8 +160,7 @@ body {
   inset: 0;
   background:
     linear-gradient(135deg, rgba(26, 61, 46, 0.82) 0%, rgba(45, 106, 79, 0.72) 40%, rgba(82, 183, 136, 0.55) 100%),
-    url('assets/images/campus-aerial.jpg') center/cover no-repeat,
-    url('assets/images/campus-aerial.png') center/cover no-repeat;
+    url('https://cdn.jsdelivr.net/gh/avajiangjiang/tuyou-bilingual-summer-camp@main/assets/images/campus-aerial.jpg') center/cover no-repeat;
 }
 
 .hero-bg::after {
@@ -760,6 +759,7 @@ body {
   border-radius: var(--radius);
   overflow: hidden;
   transition: transform 0.3s;
+  background: #dfece4;
 }
 
 .gallery-item picture {
