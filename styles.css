@@ -773,7 +773,12 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.4s;
+}
+
+.gallery-item img.is-loaded {
+  opacity: 1;
 }
 
 .gallery-item:hover {
